@@ -1,3 +1,4 @@
 # Accordion
 A simple accordion in html-css-js
-http://codepen.io/anon/pen/yyPaxZ 
+
+Demo: http://codepen.io/anon/pen/yyPaxZ 
