@@ -1,0 +1,43 @@
+<!-- Accordion html/css/js-->
+<!DOCTYPE html>
+<html lang ="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion Rhyme</title>
+	<!-- css -->
+	<style>
+		.accordion-toggle {cursor:pointer;}
+		.accordion-content {display:none;}
+		.accordion-content.default {display:block;}
+	</style>
+	<!-- js -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#accordion").find(".accordion-toggle").click(function(){
+				// Expand or collapse panel
+				$(this).next().slideToggle("fast");
+				// Collapse other panels
+				$(".accordion-content").not($(this).next()).slideUp("fast");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="accordion">
+		<h4 class="accordion-toggle">Accordion 1</h4>
+		<div class="accordion-content default">
+			<p>Little Miss Muffet, <br>Sat on a tuffet,</p>
+		</div>
+		<h4 class="accordion-toggle">Accordion 2</h4>
+		<div class="accordion-content">
+			<p>Eating her curds and whey;<br>Along came a spider,</p>
+		</div>
+		<h4 class="accordion-toggle">Accordion 3</h4>
+		<div class="accordion-content">
+			<p>Who sat down beside her, <br>And frightened Miss Muffet away.</p>
+		</div>
+
+	</div>
+</body>
+</html>
